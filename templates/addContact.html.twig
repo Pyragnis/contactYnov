@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+{% block titre %}ajouter un contact
+{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-body">
+						{{ form_start(Contact, {'attr': {'class': 'my-form'}}) }}
+						<div class="form-group">
+							{{ form_label(Contact.nom) }}
+							{{ form_widget(Contact.nom, {'attr': {'class': 'form-control'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_label(Contact.prenom) }}
+							{{ form_widget(Contact.prenom, {'attr': {'class': 'form-control'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_label(Contact.email) }}
+							{{ form_widget(Contact.email, {'attr': {'class': 'form-control'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_label(Contact.tel) }}
+							{{ form_widget(Contact.tel, {'attr': {'class': 'form-control'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_label(Contact.commentaire) }}
+							{{ form_widget(Contact.commentaire, {'attr': {'class': 'form-control'}}) }}
+						</div>
+						<div class="text-center">
+							<button type="submit" class="btn btn-primary">Enregistrer</button>
+						</div>
+						{{ form_end(Contact) }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
